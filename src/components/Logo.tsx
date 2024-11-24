@@ -1,0 +1,1 @@
+// Suppression complète du fichier Logo.tsx car il n'est plus nécessaire

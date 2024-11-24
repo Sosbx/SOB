@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+/* Styles pour les onglets */
+.react-tabs__tab-list {
+  @apply flex border-b-0 mb-0;
+}
+
+.react-tabs__tab {
+  @apply flex-1 px-6 py-3 text-base font-medium text-gray-500 hover:text-gray-700 cursor-pointer transition-all duration-200 border-2 border-b-0 rounded-t-lg bg-gray-50;
+}
+
+.react-tabs__tab:first-child {
+  @apply mr-1;
+}
+
+.react-tabs__tab--selected {
+  @apply text-indigo-600 border-indigo-600 bg-white shadow-[2px_-2px_5px_rgba(0,0,0,0.1)];
+}
+
+.react-tabs__tab-panel {
+  @apply hidden;
+}
+
+.react-tabs__tab-panel--selected {
+  @apply block;
+}
+
+/* Style personnalisé pour l'effet de sélection */
+.ui-selected {
+  @apply relative z-10;
+}
+
+/* Styles pour les boutons */
+button {
+  @apply transition-all duration-200;
+}
+
+/* Styles pour les inputs */
+input, select, textarea {
+  @apply transition-all duration-200;
+}
+
+/* Styles pour les cards */
+.card {
+  @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200;
+}
+
+/* Animation de fade pour le menu */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.menu-fade-in {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+/* Styles pour les détails/sommaires */
+details {
+  @apply transition-all duration-200;
+}
+
+details summary {
+  @apply cursor-pointer select-none;
+}
+
+details[open] summary {
+  @apply mb-4;
+}
+
+/* Effet de hover sur les liens */
+a {
+  @apply transition-colors duration-200;
+}
+
+/* Styles pour les sections */
+section {
+  @apply space-y-6;
+}
+
+/* Styles pour les titres */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-semibold tracking-tight;
+}
+
+/* Styles pour les badges */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+}
